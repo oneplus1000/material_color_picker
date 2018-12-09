@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 /// keyboard if needed.
 enum DisplayType { bottomSheet, dropDown }
 
+// https://www.dartlang.org/guides/language/language-tour#generics
 class _DropdownRouteLayout<T> extends SingleChildLayoutDelegate {
   _DropdownRouteLayout({this.rect, this.screen});
 
@@ -85,7 +86,7 @@ class ValuePickerButton<W extends PickerBase<V>, V> extends StatefulWidget {
 
   final V currentValue;
 
-  final HeaderBuilder<V> headerBuilder;
+  final HeaderBuilder<dynamic> headerBuilder;
 
   final ValueChanged<V> onValue;
 
