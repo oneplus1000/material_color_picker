@@ -10,24 +10,24 @@ You can embed into your material app or use it on a Dialog like this:
 
 ```dart
 Future<Color> colorPicker() async {
-    return showDialog<Color>(
-      context: context,
-      barrierDismissible: false, // user must tap button!
-      builder: (BuildContext context) {
-        return SimpleDialog(
-          children: <Widget>[
-            ColorPicker(
-              type: MaterialType.transparency,
-              onColor: (color) {
-                Navigator.pop(context, color);
-              },
-              currentColor: Colors.amberAccent,
-            ),
-          ],
-        );
-      },
-    );
-  }
+  return showDialog<Color>(
+    context: context,
+    barrierDismissible: false, // user must tap button!
+    builder: (BuildContext context) {
+      return SimpleDialog(
+        children: <Widget>[
+          ColorPicker(
+            type: MaterialType.transparency,
+            onColor: (color) {
+              Navigator.pop(context, color);
+            },
+            currentColor: Colors.amberAccent,
+          ),
+        ],
+      );
+    },
+  );
+}
 ```
 
 For help getting started with Flutter, view our online [documentation](http://flutter.io/).
